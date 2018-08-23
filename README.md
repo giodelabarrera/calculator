@@ -3,6 +3,8 @@
 
 Web calculator build with HTML, Grid CSS, Vanilla JS
 
+Check demo [https://giodelabarrera.github.io/js-calculator](https://giodelabarrera.github.io/js-calculator/.)
+
 ## Screenshot
 
 ![](./screenshot.png)
