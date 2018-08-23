@@ -1,31 +1,25 @@
 
-# Calculadora HTML JS CSS
+# JS Calculator
 
-Calculadora web
+Web calculator build with HTML, Grid CSS, Vanilla JS
 
-# Screenshot
+## Screenshot
 
 ![](./screenshot.png)
 
-# Uso
+## Usage
 
-El uso es mediante el ratón clicando en los botones.
+The use is by the mouse by clicking on the buttons. In the next version, it can be used through the keyboard buttons
 
-__Botón C__
+### Button C
 
-Limpia la pantalla de la calculadora
+Clean the calculator screen
 
-__Botónes de numeros__
+### Number buttons
 
-Guarda en la calculadora los números a calcular
+Save the numbers to calculate
 
-__Botónes de operación__
+### Operation buttons
 
-Calculan los numeros introducidos
-
-# Resources
-
-- [HTML](https://es.wikipedia.org/wiki/HTML)
-- [Javascript](https://es.wikipedia.org/wiki/JavaScript)
-- [CSS](https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada)
+Calculate the entered numbers
 

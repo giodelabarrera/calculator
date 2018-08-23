@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'DsDigi';
-  src: url('../fonts/DS-DIGI.TTF') format('truetype');
+  src: url('fonts/DS-DIGI.TTF') format('truetype');
 }
 
 *,
@@ -129,7 +129,7 @@ body {
 }
 
 #keypad button[name="percent"] {
-  background-image: url('../img/percent.png');
+  background-image: url('images/percent.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
@@ -141,14 +141,14 @@ body {
 }
 
 #keypad button[name="divide"] {
-  background-image: url('../img/divide.png');
+  background-image: url('images/divide.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
 }
 
 #keypad button[name="subtract"] {
-  background-image: url('../img/subtract.png');
+  background-image: url('images/subtract.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
