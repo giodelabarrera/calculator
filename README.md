@@ -7,7 +7,7 @@ Check demo [https://giodelabarrera.github.io/js-calculator](https://giodelabarre
 
 ## Screenshot
 
-![](./screenshot.png)
+![](https://user-images.githubusercontent.com/1263588/110334220-cfe3fa80-8022-11eb-9d23-0073cba9b0e3.png)
 
 ## Usage
 
