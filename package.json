@@ -4,6 +4,7 @@
   "description": "Web calculator build with HTML, Grid CSS, Vanilla JS",
   "main": "main.js",
   "scripts": {
+    "build": "esbuild main.js --bundle --outfile=out.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,7 @@
   "bugs": {
     "url": "https://github.com/giodelabarrera/js-calculator/issues"
   },
-  "homepage": "https://github.com/giodelabarrera/js-calculator#readme"
+  "homepage": "https://github.com/giodelabarrera/js-calculator#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }
