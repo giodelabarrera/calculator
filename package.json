@@ -4,7 +4,7 @@
   "description": "Web calculator build with HTML, Grid CSS, Vanilla JS",
   "main": "main.js",
   "scripts": {
-    "dev": "servor . index.html 1234 --browser --reload"
+    "dev": "servor src index.html 1234 --browser --reload"
   },
   "repository": {
     "type": "git",
