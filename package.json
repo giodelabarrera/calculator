@@ -4,7 +4,7 @@
   "description": "Web calculator build with HTML, Grid CSS, Vanilla JS",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "servor . index.html 1234 --browser --reload"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,7 @@
   },
   "homepage": "https://github.com/giodelabarrera/js-calculator#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "servor": "^4.0.2"
+  }
 }
