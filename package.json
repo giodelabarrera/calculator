@@ -1,8 +1,7 @@
 {
-  "name": "js-calculator",
+  "name": "calculator",
   "version": "1.0.0",
   "description": "Web calculator build with HTML, Grid CSS, Vanilla JS",
-  "main": "main.js",
   "scripts": {
     "build": "node ./scripts/build.js",
     "dev": "servor src index.html 1234 --browser --reload",
@@ -13,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/giodelabarrera/js-calculator.git"
   },
-  "author": "",
+  "author": "Giorgio de la Barrera<giodelabarrera@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/giodelabarrera/js-calculator/issues"
