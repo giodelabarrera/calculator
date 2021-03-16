@@ -4,8 +4,9 @@
   "description": "Web calculator build with HTML, Grid CSS, Vanilla JS",
   "main": "main.js",
   "scripts": {
-    "build": "esbuild main.js --bundle --outfile=out.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "servor src index.html 1234 --browser --reload",
+    "test": "jest",
+    "test-debug": "node --inspect-brk node_modules/.bin/jest --runInBand --watch"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,13 @@
   },
   "homepage": "https://github.com/giodelabarrera/js-calculator#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@testing-library/dom": "^7.30.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "servor": "^4.0.2"
+  }
 }
