@@ -4,6 +4,7 @@
   "description": "Web calculator build with HTML, Grid CSS, Vanilla JS",
   "main": "main.js",
   "scripts": {
+    "build": "node ./scripts/build.js",
     "dev": "servor src index.html 1234 --browser --reload",
     "test": "jest",
     "test-debug": "node --inspect-brk node_modules/.bin/jest --runInBand --watch"
