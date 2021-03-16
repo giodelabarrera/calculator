@@ -141,10 +141,15 @@ body {
 }
 
 #keypad button[name="divide"] {
-  background-image: url('images/divide.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="divide"] svg {
+  fill: #444444;
+  width: 24px;
+  height: 24px;
 }
 
 #keypad button[name="subtract"] {
