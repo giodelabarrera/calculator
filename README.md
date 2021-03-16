@@ -1,27 +1,40 @@
+# calculator
 
-# JS Calculator
+> Web calculator build with HTML, Grid CSS, Vanilla JS
 
-Web calculator build with HTML, Grid CSS, Vanilla JS
+[View calculator in production](https://calculator-giodelabarrera.vercel.app)
 
-Check demo [https://giodelabarrera.github.io/js-calculator](https://giodelabarrera.github.io/js-calculator/.)
+<br/>
+<p align="center">
+    <img width="786" alt="Star Wars" src="https://user-images.githubusercontent.com/1263588/110334220-cfe3fa80-8022-11eb-9d23-0073cba9b0e3.png">
+</p>
 
-## Screenshot
+## Getting Started
 
-![](https://user-images.githubusercontent.com/1263588/110334220-cfe3fa80-8022-11eb-9d23-0073cba9b0e3.png)
+### Installation
 
-## Usage
+```sh
+npm i
+```
 
-The use is by the mouse by clicking on the buttons. In the next version, it can be used through the keyboard buttons
+### Run web server
 
-### Button C
+```sh
+npm run dev
+```
 
-Clean the calculator screen
+---
 
-### Number buttons
+## Development
 
-Save the numbers to calculate
+### Run tests
 
-### Operation buttons
+```sh
+npm test
+```
 
-Calculate the entered numbers
+### Build
 
+```sh
+npm run build
+```
