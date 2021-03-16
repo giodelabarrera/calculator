@@ -2,7 +2,7 @@
 
 > Web calculator build with HTML, Grid CSS, Vanilla JS
 
-[View calculator in production](https://calculator-giodelabarrera.vercel.app)
+[➡️ View demo](https://calculator-giodelabarrera.vercel.app)
 
 <br/>
 <p align="center">
