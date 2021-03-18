@@ -110,6 +110,10 @@ body {
   cursor: pointer;
 }
 
+#keypad button > * {
+  pointer-events: none;
+}
+
 #keypad button:focus {
   outline: 0;
 }
