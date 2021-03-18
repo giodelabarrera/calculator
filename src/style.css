@@ -32,7 +32,6 @@ body {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #5dbec9;
   display: flex;
   justify-content: center;
@@ -100,10 +99,9 @@ body {
   font-weight: bold;
   border: none;
   cursor: pointer;
-}
-
-#keypad button > * {
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #keypad button:focus {
@@ -114,94 +112,20 @@ body {
   transform: scale(0.9);
 }
 
+#keypad button > * {
+  pointer-events: none;
+}
+
+#keypad button svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
+}
+
 #keypad button[name="clean"] {
   background-color: #fc573f !important;
   color: #ffffff !important;
   font-size: 16pt;
-}
-
-#keypad button[name="negate"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="negate"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="percent"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="percent"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="multiply"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="multiply"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="divide"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="divide"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="sum"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="sum"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="subtract"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="subtract"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="equals"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="equals"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
 }
 
 #keypad button[name="zero"] {
