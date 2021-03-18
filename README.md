@@ -6,7 +6,7 @@
 
 <br/>
 <p align="center">
-    <img width="786" alt="Star Wars" src="https://user-images.githubusercontent.com/1263588/110334220-cfe3fa80-8022-11eb-9d23-0073cba9b0e3.png">
+    <img width="786" alt="Calculator" src="https://user-images.githubusercontent.com/1263588/111604850-07e2fe80-87d6-11eb-9665-f3abb4db4919.png">
 </p>
 
 ## Getting Started
