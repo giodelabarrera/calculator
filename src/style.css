@@ -123,8 +123,8 @@ body {
 }
 
 #keypad button[name="clean"] {
-  background-color: #fc573f !important;
-  color: #ffffff !important;
+  background-color: #fc573f;
+  color: #ffffff;
   font-size: 16pt;
 }
 
