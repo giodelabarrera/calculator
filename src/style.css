@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 @font-face {
-  font-family: 'DsDigi';
-  src: url('fonts/DS-DIGI.TTF') format('truetype');
+  font-family: "DsDigi";
+  src: url("fonts/DS-DIGI.TTF") format("truetype");
 }
 
 *,
@@ -24,7 +24,8 @@ html {
   width: device-width;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -37,11 +38,11 @@ body {
   padding: 0;
   height: 100%;
   background-color: #5dbec9;
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex; 
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -65,7 +66,6 @@ body {
 
 #display {
   background-color: #d2d3d5;
-  /* width: 100%; */
   height: 93px;
   border-radius: 6px;
   overflow: hidden;
@@ -81,7 +81,7 @@ body {
   -moz-transform: scaleY(1.4);
   font-size: 51pt;
   color: #434446;
-  font-family: 'DsDigi';
+  font-family: "DsDigi";
   transition-property: font-size;
   transition-duration: 4s;
   transition-delay: 2s;
@@ -104,18 +104,22 @@ body {
   width: 100%;
   font-size: 20pt;
   color: #444444;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   border: none;
   cursor: pointer;
 }
 
+#keypad button > * {
+  pointer-events: none;
+}
+
 #keypad button:focus {
-  outline:0;
+  outline: 0;
 }
 
 #keypad button:active {
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 #keypad button[name="clean"] {
@@ -125,33 +129,87 @@ body {
 }
 
 #keypad button[name="negate"] {
-  font-size: 16pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="negate"] svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
 }
 
 #keypad button[name="percent"] {
-  background-image: url('images/percent.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="percent"] svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
 }
 
 #keypad button[name="multiply"] {
-  font-size: 20pt;
-  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="multiply"] svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
 }
 
 #keypad button[name="divide"] {
-  background-image: url('images/divide.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="divide"] svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
+}
+
+#keypad button[name="sum"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="sum"] svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
 }
 
 #keypad button[name="subtract"] {
-  background-image: url('images/subtract.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="subtract"] svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
+}
+
+#keypad button[name="equals"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad button[name="equals"] svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
 }
 
 #keypad button[name="zero"] {
