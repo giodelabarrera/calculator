@@ -31,17 +31,9 @@ body {
 
 body {
   margin: 0;
-}
-
-.flex-container {
-  margin: 0;
   padding: 0;
   height: 100%;
   background-color: #5dbec9;
-  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   justify-content: center;
   align-items: center;
