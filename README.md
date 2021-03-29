@@ -2,11 +2,21 @@
 
 > Web calculator build with HTML, Grid CSS, Vanilla JS
 
-[View demo](https://calculator-giodelabarrera.vercel.app)
+Features
+
+- ⚡️ Performance
+- 🐙 DOM Testing library
+- 🎨 CSS grid
+
+[🙈 View demo online](https://calculator-giodelabarrera.vercel.app)
 
 <br/>
 <p align="center">
     <img width="786" alt="Calculator" src="https://user-images.githubusercontent.com/1263588/111604850-07e2fe80-87d6-11eb-9665-f3abb4db4919.png">
+</p>
+
+<p align="center">
+    <img width="786" alt="Calculator performance" src="https://user-images.githubusercontent.com/1263588/112833220-bae50f00-9096-11eb-9adb-36366de47927.png">
 </p>
 
 ## Getting Started
