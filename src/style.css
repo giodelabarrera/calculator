@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/open-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
 
 @font-face {
   font-family: "DsDigi";
-  src: url("fonts/DS-DIGI.TTF") format("truetype");
+  src: url("fonts/ds-digi-webfont.woff2") format("woff2");
+  font-display: swap;
 }
 
 *,
@@ -11,37 +16,18 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
-}
-
-@-ms-viewport {
-  width: device-width;
-}
-
 html,
 body {
   height: 100%;
 }
 
 body {
-  margin: 0;
-}
-
-.flex-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #5dbec9;
-  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,10 +94,9 @@ body {
   font-weight: bold;
   border: none;
   cursor: pointer;
-}
-
-#keypad button > * {
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #keypad button:focus {
@@ -122,94 +107,20 @@ body {
   transform: scale(0.9);
 }
 
+#keypad button > * {
+  pointer-events: none;
+}
+
+#keypad button svg {
+  fill: #444444;
+  width: 16px;
+  height: 16px;
+}
+
 #keypad button[name="clean"] {
-  background-color: #fc573f !important;
-  color: #ffffff !important;
+  background-color: #fc573f;
+  color: #ffffff;
   font-size: 16pt;
-}
-
-#keypad button[name="negate"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="negate"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="percent"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="percent"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="multiply"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="multiply"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="divide"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="divide"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="sum"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="sum"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="subtract"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="subtract"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
-}
-
-#keypad button[name="equals"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#keypad button[name="equals"] svg {
-  fill: #444444;
-  width: 16px;
-  height: 16px;
 }
 
 #keypad button[name="zero"] {
