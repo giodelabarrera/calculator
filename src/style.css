@@ -36,9 +36,9 @@ body {
 #calculator {
   background-color: #444444;
   width: 350px;
-  height: 485px;
   border-radius: 20px;
   padding: 22px;
+  padding-bottom: 30px;
 }
 
 .panel {
@@ -54,23 +54,18 @@ body {
   background-color: #d2d3d5;
   height: 93px;
   border-radius: 6px;
-  overflow: hidden;
-  text-align: right;
   padding-left: 10px;
   padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #display span {
-  padding-top: 6px;
-  display: inline-block;
   transform: scaleY(1.4);
-  -moz-transform: scaleY(1.4);
   font-size: 51pt;
   color: #434446;
   font-family: "DsDigi";
-  transition-property: font-size;
-  transition-duration: 4s;
-  transition-delay: 2s;
 }
 
 #keypad {
