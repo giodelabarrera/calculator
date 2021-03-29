@@ -18,15 +18,23 @@ function render(html) {
 test("renders buttons", () => {
   const { getByRole } = render(html);
 
-  expect(getByRole("button", { name: /0/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /1/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /2/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /3/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /4/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /5/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /6/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /7/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /8/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /9/i })).toBeInTheDocument();
-  expect(getByRole("button", { name: /·/i })).toBeInTheDocument();
+  expect(getByRole("button", { name: "0" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "1" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "2" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "3" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "4" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "5" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "6" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "7" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "8" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "9" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "·" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "clean" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "negate" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "percent" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "divide" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "multiply" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "subtract" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "sum" })).toBeInTheDocument();
+  expect(getByRole("button", { name: "equal" })).toBeInTheDocument();
 });
