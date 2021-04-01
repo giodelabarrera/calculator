@@ -154,7 +154,6 @@ function handleClickPointButtonElem(event) {
 function handleClickOperatorButtonElem(event) {
   var buttonElem = event.target;
   var buttonData = getButtonDataByName(buttonElem.name);
-  fade(displayValueElem);
 
   if (calculator.hasCalculateOperator) {
     calculator.displayValueToClean = true;
@@ -175,27 +174,21 @@ function handleClickOperatorButtonElem(event) {
   updateDisplayValue(calculator.internalValue);
 }
 
-function handleClickNegateButtonElem(event) {
+function handleClickNegateButtonElem() {
   var value = valueToCalculate(displayValueElem.innerText);
-  fade(displayValueElem);
   result = negate(value);
   calculator.internalValue = valueToDisplay(result);
   updateDisplayValue(calculator.internalValue);
 }
 
-function handleClickPercentButtonElem(event) {
-  var buttonElem = event.target;
+function handleClickPercentButtonElem() {
   var value = valueToCalculate(displayValueElem.innerText);
-  fade(displayValueElem);
   result = percent(value);
   calculator.internalValue = valueToDisplay(result);
   updateDisplayValue(calculator.internalValue);
 }
 
-function handleClickEqualsButtonElem(event) {
-  var buttonElem = event.target;
-  var buttonData = getButtonDataByName(buttonElem.name);
-  fade(displayValueElem);
+function handleClickEqualsButtonElem() {
   calculator.displayValueToClean = true;
 
   if (calculator.operatorToCalculate) {
@@ -214,21 +207,12 @@ function handleClickEqualsButtonElem(event) {
 }
 
 function handleClickCleanButtonElem(event) {
-  var buttonElem = event.target;
-  fade(displayValueElem);
   calculator = initializeCalculator();
   updateDisplayValue(calculator.internalValue);
 }
 
 function updateDisplayValue(value) {
   displayValueElem.innerText = value;
-}
-
-function fade(element) {
-  element.classList.add("hide");
-  setTimeout(function () {
-    element.classList.remove("hide");
-  }, 100);
 }
 
 function handleClickButtonElem(event) {
