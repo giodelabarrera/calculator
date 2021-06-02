@@ -1,40 +1,49 @@
-import { getQueriesForElement } from "@testing-library/dom";
 import "@testing-library/jest-dom/extend-expect";
 import { JSDOM } from "jsdom";
-import fs from "fs";
-import path from "path";
+import { screen, fireEvent, within } from "@testing-library/dom";
+import userEvent from "@testing-library/user-event";
 
-const html = fs.readFileSync(path.resolve(__dirname, "../index.html"), "utf8");
+async function render() {
+  const options = {
+    runScripts: "dangerously",
+    resources: "usable",
+  };
+  const dom = await JSDOM.fromFile("./src/index.html", options);
 
-function render(html) {
-  const dom = new JSDOM(html, { runScripts: "dangerously" });
+  await new Promise((resolve) =>
+    dom.window.document.addEventListener("load", resolve)
+  );
+
+  // allow to use screen of RTL
+  document.body.innerHTML = dom.window.document.body.innerHTML;
+
   const container = dom.window.document.body;
   return {
     container,
-    ...getQueriesForElement(container),
+    ...within(container),
   };
 }
 
-test("renders buttons", () => {
-  const { getByRole } = render(html);
+test("renders buttons", async () => {
+  await render();
 
-  expect(getByRole("button", { name: "0" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "1" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "2" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "3" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "4" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "5" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "6" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "7" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "8" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "9" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "·" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "clean" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "negate" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "percent" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "divide" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "multiply" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "subtract" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "sum" })).toBeInTheDocument();
-  expect(getByRole("button", { name: "equal" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "0" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "1" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "2" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "3" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "4" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "5" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "6" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "7" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "8" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "9" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "·" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "clean" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "negate" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "percent" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "divide" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "multiply" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "subtract" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "sum" })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "equal" })).toBeInTheDocument();
 });
