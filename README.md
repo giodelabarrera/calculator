@@ -4,6 +4,7 @@
 
 **Features:**
 
+- ♿️ Accessibility
 - ⚡️ Performance
 - 🐙 DOM Testing library
 - 🎨 CSS grid
