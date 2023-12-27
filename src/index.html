@@ -115,10 +115,6 @@
         align-items: center;
       }
 
-      #keypad button:focus {
-        outline: 0;
-      }
-
       #keypad button:active {
         transform: scale(0.9);
       }
@@ -149,13 +145,17 @@
     <main id="calculator">
       <div class="panel">
         <div id="display">
-          <span>0</span>
+          <span aria-live="polite">0</span>
         </div>
       </div>
       <div id="keypad">
         <button name="clean" aria-label="clean">C</button>
         <button name="negate" aria-label="negate">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.293 141.293">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 141.293 141.293"
+          >
             <defs />
             <path
               d="M77.955 109.975c-4.037 0-7.309 3.271-7.309 7.308s3.272 7.31 7.309 7.31h56.029c4.037 0 7.309-3.271 7.309-7.31 0-4.036-3.271-7.308-7.309-7.308H77.955zM0 44.2c0 4.037 3.272 7.308 7.309 7.308h19.489v19.49c0 4.036 3.271 7.309 7.308 7.309s7.309-3.271 7.309-7.309v-19.49H63.34c4.037 0 7.308-3.271 7.308-7.308s-3.271-7.309-7.308-7.309H41.414V12.53c0-4.037-3.272-7.308-7.309-7.308-4.037 0-7.308 3.271-7.308 7.308v24.361H7.308C3.272 36.892 0 40.164 0 44.2zM131.428 17.261c-2.854-2.855-7.481-2.855-10.336 0L14.763 123.594c-2.853 2.854-2.853 7.481 0 10.334 1.425 1.429 3.298 2.143 5.167 2.143 1.868 0 3.742-.714 5.169-2.143L131.428 27.599c2.855-2.853 2.855-7.485 0-10.338z"
@@ -163,7 +163,11 @@
           </svg>
         </button>
         <button name="percent" aria-label="percent">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
             <defs />
             <path
               d="M504.936 7.136c-9.38-9.392-24.6-9.392-33.98 0L7.204 470.888c-9.388 9.384-9.388 24.592 0 33.976 4.692 4.696 10.844 7.044 16.992 7.044s12.3-2.348 16.988-7.044L504.936 41.112c9.388-9.384 9.388-24.592 0-33.976zM114.144.256C51.208.256 0 51.468 0 114.404s51.208 114.144 114.144 114.144c62.94 0 114.144-51.212 114.144-114.148S177.08.256 114.144.256zm0 180.228c-36.44 0-66.084-29.648-66.084-66.084 0-36.436 29.648-66.084 66.084-66.084 36.44 0 66.084 29.648 66.084 66.084 0 36.436-29.644 66.084-66.084 66.084zM397.856 283.596c-62.936 0-114.144 51.208-114.144 114.144s51.208 114.144 114.144 114.144S512 460.68 512 397.74s-51.208-114.144-114.144-114.144zm0 180.224c-36.44 0-66.084-29.648-66.084-66.084 0-36.436 29.648-66.084 66.084-66.084 36.436 0 66.084 29.648 66.084 66.084s-29.644 66.084-66.084 66.084z"
@@ -171,7 +175,11 @@
           </svg>
         </button>
         <button name="divide" aria-label="divide">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 42 42"
+          >
             <defs />
             <path
               d="M0 19h42v4H0zM21 13c2.757 0 5-2.243 5-5s-2.243-5-5-5-5 2.243-5 5 2.243 5 5 5zM21 29c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"
@@ -183,6 +191,7 @@
         <button name="nine">9</button>
         <button name="multiply" aria-label="multiply">
           <svg
+            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="105.93 105.93 271.53 271.53"
           >
@@ -196,7 +205,11 @@
         <button name="five">5</button>
         <button name="six">6</button>
         <button name="subtract" aria-label="subtract">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.667 298.667">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 298.667 298.667"
+          >
             <defs />
             <path d="M0 128h298.667v42.667H0z" />
           </svg>
@@ -205,7 +218,11 @@
         <button name="two">2</button>
         <button name="three">3</button>
         <button name="sum" aria-label="sum">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.4 341.4">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 341.4 341.4"
+          >
             <defs />
             <path
               d="M192 149.4V0h-42.6v149.4H0V192h149.4v149.4H192V192h149.4v-42.6z"
@@ -213,9 +230,13 @@
           </svg>
         </button>
         <button name="zero">0</button>
-        <button name="point">·</button>
+        <button aria-label="dot" name="point">·</button>
         <button name="equals" aria-label="equal">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.333 341.333">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 341.333 341.333"
+          >
             <defs />
             <path d="M0 192h341.333v42.667H0zM0 106.667h341.333v42.667H0z" />
           </svg>
