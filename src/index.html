@@ -17,142 +17,27 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>"
     />
-
-    <style>
-      @font-face {
-        font-family: "Open Sans";
-        src: url("fonts/open-sans-regular.woff2") format("woff2");
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "DsDigi";
-        src: url("fonts/ds-digi-webfont.woff2") format("woff2");
-        font-display: swap;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        height: 100%;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-          "Helvetica Neue", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #5dbec9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #calculator {
-        background-color: #444444;
-        width: 350px;
-        border-radius: 20px;
-        padding: 22px;
-        padding-bottom: 30px;
-      }
-
-      .panel {
-        background-color: #ffffff;
-        width: 100%;
-        height: 130px;
-        border-radius: 8px;
-        padding: 11px;
-        margin-bottom: 25px;
-      }
-
-      #display {
-        background-color: #d2d3d5;
-        height: 93px;
-        border-radius: 6px;
-        padding-left: 10px;
-        padding-right: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-      }
-
-      #display span {
-        transform: scaleY(1.4);
-        font-size: 51pt;
-        color: #434446;
-        font-family: "DsDigi";
-      }
-
-      #keypad {
-        display: grid;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 11px;
-        grid-row-gap: 19px;
-        padding: 0 11px;
-      }
-
-      #keypad button {
-        background-color: #ffffff;
-        border-radius: 9px;
-        padding: 2px 0;
-        text-align: center;
-        width: 100%;
-        font-size: 20pt;
-        color: #444444;
-        font-family: "Open Sans", sans-serif;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #keypad button:active {
-        transform: scale(0.9);
-      }
-
-      #keypad button > * {
-        pointer-events: none;
-      }
-
-      #keypad button svg {
-        fill: #444444;
-        width: 16px;
-        height: 16px;
-      }
-
-      #keypad button[name="clean"] {
-        background-color: #fc573f;
-        color: #ffffff;
-        font-size: 16pt;
-      }
-
-      #keypad button[name="zero"] {
-        grid-column: 1 / span 2;
-        grid-row: 5;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    <main id="calculator">
+    <main id="calculator" class="calculator">
       <div class="panel">
-        <div id="display">
-          <span aria-live="polite">0</span>
+        <div id="display" class="panel__display">
+          <span aria-live="polite" class="panel__display-number">0</span>
         </div>
       </div>
-      <div id="keypad">
-        <button name="clean" aria-label="clean">C</button>
-        <button name="negate" aria-label="negate">
+      <div id="keypad" class="keypad">
+        <button
+          name="clean"
+          aria-label="clean"
+          class="keypad__button keypad__clean-button"
+        >
+          C
+        </button>
+        <button name="negate" aria-label="negate" class="keypad__button">
           <svg
             aria-hidden="true"
+            class="keypad__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 141.293 141.293"
           >
@@ -162,9 +47,10 @@
             />
           </svg>
         </button>
-        <button name="percent" aria-label="percent">
+        <button name="percent" aria-label="percent" class="keypad__button">
           <svg
             aria-hidden="true"
+            class="keypad__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >
@@ -174,9 +60,10 @@
             />
           </svg>
         </button>
-        <button name="divide" aria-label="divide">
+        <button name="divide" aria-label="divide" class="keypad__button">
           <svg
             aria-hidden="true"
+            class="keypad__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 42 42"
           >
@@ -186,12 +73,13 @@
             />
           </svg>
         </button>
-        <button name="seven">7</button>
-        <button name="eight">8</button>
-        <button name="nine">9</button>
-        <button name="multiply" aria-label="multiply">
+        <button name="seven" class="keypad__button">7</button>
+        <button name="eight" class="keypad__button">8</button>
+        <button name="nine" class="keypad__button">9</button>
+        <button name="multiply" aria-label="multiply" class="keypad__button">
           <svg
             aria-hidden="true"
+            class="keypad__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="105.93 105.93 271.53 271.53"
           >
@@ -201,12 +89,13 @@
             ></path>
           </svg>
         </button>
-        <button name="four">4</button>
-        <button name="five">5</button>
-        <button name="six">6</button>
-        <button name="subtract" aria-label="subtract">
+        <button name="four" class="keypad__button">4</button>
+        <button name="five" class="keypad__button">5</button>
+        <button name="six" class="keypad__button">6</button>
+        <button name="subtract" aria-label="subtract" class="keypad__button">
           <svg
             aria-hidden="true"
+            class="keypad__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 298.667 298.667"
           >
@@ -214,12 +103,13 @@
             <path d="M0 128h298.667v42.667H0z" />
           </svg>
         </button>
-        <button name="one">1</button>
-        <button name="two">2</button>
-        <button name="three">3</button>
-        <button name="sum" aria-label="sum">
+        <button name="one" class="keypad__button">1</button>
+        <button name="two" class="keypad__button">2</button>
+        <button name="three" class="keypad__button">3</button>
+        <button name="sum" aria-label="sum" class="keypad__button">
           <svg
             aria-hidden="true"
+            class="keypad__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 341.4 341.4"
           >
@@ -229,11 +119,14 @@
             />
           </svg>
         </button>
-        <button name="zero">0</button>
-        <button aria-label="dot" name="point">·</button>
-        <button name="equals" aria-label="equal">
+        <button name="zero" class="keypad__button keypad__zero-button">
+          0
+        </button>
+        <button aria-label="dot" name="point" class="keypad__button">·</button>
+        <button name="equals" aria-label="equal" class="keypad__button">
           <svg
             aria-hidden="true"
+            class="keypad__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 341.333 341.333"
           >
